@@ -3,9 +3,9 @@
   // UI / Workbench & Window
   // ─────────────────────────────
   "workbench.settings.editor": "json",
-  "workbench.colorTheme": "CodeSandbox Legacy",
-  "workbench.preferredDarkColorTheme": "CodeSandbox Legacy",
-  "workbench.preferredLightColorTheme": "One Dark Palenight",
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.preferredDarkColorTheme": "Gruvbox Dark Hard",
+  "workbench.preferredLightColorTheme": "Gruvbox Light Soft",
   "workbench.iconTheme": "symbols",
   "workbench.sideBar.location": "right",
   "workbench.activityBar.location": "top",
@@ -20,11 +20,7 @@
   "workbench.tree.renderIndentGuides": "always",
   "workbench.quickOpen.preserveInput": true,
   "workbench.commandPalette.preserveInput": true,
-  "window.nativeTabs": true,
-  "window.nativeFullScreen": false,
-  "window.titleBarStyle": "custom",
   "window.title": "${dirty}${rootName}${separator}${appName}",
-  "window.newWindowProfile": "Default",
   "zenMode.hideActivityBar": false,
   "zenMode.hideLineNumbers": false,
   "zenMode.hideStatusBar": false,
@@ -210,7 +206,6 @@
   "git.openRepositoryInParentFolders": "never",
   "git.blame.editorDecoration.enabled": true,
   "scm.defaultViewMode": "tree",
-  "scm.showHistoryGraph": false,
   "githubPullRequests.createOnPublishBranch": "never",
   "githubPullRequests.fileListLayout": "tree",
   "githubPullRequests.pullBranch": "never",
@@ -238,7 +233,6 @@
   // ─────────────────────────────
   // Others
   // ─────────────────────────────
-  "Notes.notesLocation": "/Users/jorge.gonzalez/Documents/notes",
   "notes.notesLocation": "/Users/jorge.gonzalez/Documents/notes",
   "dateTime.showDayOfMonth": true,
   "dateTime.showMonth": true,
@@ -262,11 +256,6 @@
   "accessibility.signals.save": { "sound": "never" },
   "accessibility.signalOptions.volume": 15,
   "remote.autoForwardPortsSource": "hybrid",
-  "security.promptForLocalFileProtocolHandling": false,
-  "settingsSync.ignoredSettings": [
-    "-window.zoomLevel",
-    "editor.fontFamily"
-  ],
   "window.zoomPerWindow": false,
   "window.zoomLevel": 1,
 }
