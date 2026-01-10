@@ -3,9 +3,11 @@
   // UI / Workbench & Window
   // ─────────────────────────────
   "workbench.settings.editor": "json",
-  "workbench.colorTheme": "CodeSandbox Legacy",
-  "workbench.preferredDarkColorTheme": "CodeSandbox Legacy",
-  "workbench.preferredLightColorTheme": "One Dark Palenight",
+  "workbench.colorTheme": "Vitesse Dark Soft",
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+  "workbench.preferredDarkColorTheme": "Vitesse Dark Soft",
+  "workbench.preferredLightColorTheme": "Vitesse Light Soft",
   "workbench.iconTheme": "symbols",
   "workbench.sideBar.location": "right",
   "workbench.activityBar.location": "top",
@@ -20,19 +22,58 @@
   "workbench.tree.renderIndentGuides": "always",
   "workbench.quickOpen.preserveInput": true,
   "workbench.commandPalette.preserveInput": true,
-  "window.nativeTabs": true,
-  "window.nativeFullScreen": false,
-  "window.titleBarStyle": "custom",
-  "window.title": "${dirty}${rootName}${separator}${appName}",
-  "window.newWindowProfile": "Default",
+  "window.title": "${dirty}${rootName}${separator}${activeEditorShort}",
   "zenMode.hideActivityBar": false,
   "zenMode.hideLineNumbers": false,
   "zenMode.hideStatusBar": false,
 
   // ─────────────────────────────
+  // UI / Workbench outline
+  // ─────────────────────────────
+  "outline.problems.badges": true,
+  "outline.problems.colors": true,
+  "outline.problems.enabled": true,
+  "outline.showStructs": false,
+  "outline.showClasses": false,
+  "outline.showVariables": false,
+  "outline.showFields": false,
+  "outline.showEnums": false,
+  "outline.showInterfaces": true,
+  "outline.showProperties": false,
+  "outline.showTypeParameters": false,
+  "outline.showEvents": false,
+  "outline.showConstructors": false,
+  "outline.showMethods": true,
+  "outline.showFunctions": true,
+
+  // ─────────────────────────────
   // Fine-grained color overrides for the workbench
   // ─────────────────────────────
   "workbench.colorCustomizations": {
+    "[Vitesse Dark Soft]": {
+      "activityBar.activeBackground": "#65c89b",
+      "activityBar.activeBorder": "#945bc4",
+      "activityBar.background": "#65c89b",
+      "activityBar.foreground": "#15202b",
+      "activityBar.inactiveForeground": "#15202b99",
+      "activityBarBadge.background": "#945bc4",
+      "activityBarBadge.foreground": "#e7e7e7",
+      "sash.hoverBorder": "#65c89b",
+      "tab.activeBorder": "#65c89b",
+      "sideBar.border": "#65c89b",
+      // "statusBar.background": "#15202b",
+      "statusBar.foreground": "#42b883",
+      "statusBarItem.hoverBackground": "#359268",
+      "statusBarItem.remoteBackground": "#42b883",
+      "statusBarItem.remoteForeground": "#15202b",
+      "statusBarItem.prominentBackground": "#338862",
+      "statusBarItem.prominentForeground": "#15202b",
+      // "titleBar.activeBackground": "#15202b",
+      "titleBar.activeForeground": "#42b883",
+      // "titleBar.inactiveBackground": "#15202b99",
+      "titleBar.inactiveForeground": "#42b88399",
+    },
+
     "debugToolBar.background": "#193549",
     "panel.border": "#fbed80",
     "sash.hoverBorder": "#fbed80",
@@ -68,6 +109,9 @@
   "editor.fontWeight": "400",
   "editor.fontLigatures": true,
   "editor.lineHeight": 28,
+  "editor.suggestFontSize": 15,                        // Intellisense font size
+  "editor.suggestLineHeight": 28,
+  "editor.lineNumbers": "relative", 
   "editor.letterSpacing": -0.7,
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
@@ -88,11 +132,14 @@
   "editor.cursorBlinking": "expand",
   "editor.cursorSmoothCaretAnimation": "explicit",
   "editor.smoothScrolling": true,
+  "editor.renderLineHighlight": "none",
   "editor.renderWhitespace": "selection",
   "editor.roundedSelection": true,
   "editor.rulers": [120],
+  "editor.accessibilitySupport": "off",
   "editor.stickyScroll.enabled": true,
   "editor.stickyScroll.defaultModel": "foldingProviderModel",
+  "editor.suggestSelection": "first",
   "editor.codeLens": true,
   "editor.inlayHints.enabled": "on",
   "editor.inlayHints.fontFamily": "Monaco, Monolisa",
@@ -100,6 +147,10 @@
   "editor.inlayHints.padding": true,
   "editor.experimental.asyncTokenization": true,
   "editor.semanticTokenColorCustomizations": {
+    "[Vitesse Dark Soft]": { "rules": { "component": { "foreground": "#eccd42" }, "parameter": "#5da1a9" } },
+    "[Vitesse Dark]": { "rules": { "component": { "foreground": "#eccd42" }, "parameter": "#5d99a9" } },
+    "[Vitesse Light Soft]": { "rules": { "component": { "foreground": "#5d99a9" }, "parameter": "#5d99a9" } },
+    "[Vitesse Light]": { "rules": { "component": { "foreground": "#5d99a9" }, "parameter": "#5d99a9" } },
     "rules": {
       "*.deprecated": { "strikethrough": true },
       "*.readonly": { "fontStyle": "italic" }
@@ -108,7 +159,7 @@
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       { "scope": ["meta.type", "keyword.control"], "settings": { "fontStyle": "italic" } },
-      { "name": "params", "scope": ["meta.type"], "settings": { "fontStyle": "bold" } },
+      // { "name": "params", "scope": ["meta.type"], "settings": { "fontStyle": "bold" } },
       { "name": "tag", "scope": ["entity.name.tag.pug", "entity.other.attribute-name.tag.pug"], "settings": { "fontStyle": "bold" } },
       { "name": "attrs", "scope": ["entity.other.attribute-name.html.vue"], "settings": { "fontStyle": "italic" } },
       { "name": "Comment blocks", "scope": ["comment"], "settings": { "fontStyle": "italic" } },
@@ -128,9 +179,15 @@
   },
   "editor.suggest.insertMode": "replace",
   "editor.snippetSuggestions": "inline",
-  "editor.accessibilitySupport": "off",
   "editor.multiCursorModifier": "alt",
   "editor.mouseWheelZoom": false,
+
+  // Goto/peek behavior (prefer jumping straight to target)
+  "editor.gotoLocation.multipleReferences": "goto",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
 
   // ─────────────────────────────
   // Files, Search & Notebook
@@ -141,23 +198,23 @@
   "search.exclude": {
     "**/.git": true,
     "**/dist/": true,
-    "**/node_modules/": true
+    "**/node_modules/": true,
+    "**/build": true,
+    "**/coverage": true,
+    "**/package-lock.json": true,
+    "**/public/{[^i],?[^n]}*": true,
+    "**/vendor/{[^l],?[^ai]}*": true,
   },
+  "search.useIgnoreFiles": false, 
   "search.quickAccess.preserveInput": true,
   "explorer.compactFolders": true,
   "explorer.incrementalNaming": "smart",
-  "explorer.fileNesting.patterns": {
-    "*.js": "$(capture).js.map, $(capture).*.js, $(capture)_*.js",
-    "*.ts": "$(capture).js, $(capture).d.ts.map, $(capture).*.ts, $(capture)_*.js, $(capture)_*.ts",
-    "package.json": ".browserslist*, .circleci*, .eslint*, .prettier*, package-lock.json, tsconfig.*, yarn*",
-    "//": "Nota: Se ha truncado la lista de nesting por brevedad"
-  },
+  "editor.wordSeparators": "`~!@#%^&*()=+[{}]\\|;:'\",.<>/?", // Treat - and _ as part of words
 
   // ─────────────────────────────
   // Terminal
   // ─────────────────────────────
   "terminal.explorerKind": "external",
-  "terminal.external.osxExec": "wrap.app",
   "terminal.integrated.allowMnemonics": true,
   "terminal.integrated.defaultLocation": "editor",
   "terminal.integrated.fontFamily": "Hack Nerd Font Mono, Comic Code, Monaco, Fira Code, Inconsolata",
@@ -181,24 +238,42 @@
     "source.fixAll.stylelint": "always",
     "source.organizeImports": "never"
   },
+  "stylelint.validate": ["css", "scss", "vue"],
   "html.format.enable": false,
 
   // ─────────────────────────────
   // Language-specific overrides
   // ─────────────────────────────
-  "[html]": { "editor.defaultFormatter": "vscode.html-language-features" },
-  "[javascript]": { "editor.showFoldingControls": "mouseover" },
-  "[json]": { "editor.defaultFormatter": "vscode.json-language-features" },
-  "[jsonc]": { "editor.defaultFormatter": "vscode.json-language-features" },
-  "[yaml]": { "editor.autoIndent": "none", "editor.formatOnSave": false },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.showFoldingControls": "mouseover"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[vue]": {
+    "editor.foldingStrategy": "indentation",
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "[yaml]": {
+    "editor.autoIndent": "none",
+    "editor.formatOnSave": false
+  },
 
   // ─────────────────────────────
   // Tailwind / Frameworks
   // ─────────────────────────────
-  "emmet.includeLanguages": { "vue-html": "html" },
+  "emmet.includeLanguages": {
+    "vue-html": "html"
+  },
   "emmet.showSuggestionsAsSnippets": true,
   "vue.inlayHints.inlineHandlerLeading": true,
-  "vue.complete.casing.props": "kebab",
 
   // ─────────────────────────────
   // Git & Collaboration
@@ -210,10 +285,6 @@
   "git.openRepositoryInParentFolders": "never",
   "git.blame.editorDecoration.enabled": true,
   "scm.defaultViewMode": "tree",
-  "scm.showHistoryGraph": false,
-  "githubPullRequests.createOnPublishBranch": "never",
-  "githubPullRequests.fileListLayout": "tree",
-  "githubPullRequests.pullBranch": "never",
 
   // ─────────────────────────────
   // Extension-specific tweaks
@@ -222,51 +293,131 @@
   "errorLens.fontSize": "11",
   "errorLens.fontStyleItalic": true,
   "errorLens.fontWeight": "500",
-  "redhat.telemetry.enabled": false,
   "extensions.ignoreRecommendations": true,
-
+  "redhat.telemetry.enabled": false,
+  "i18n-ally.disabled": true,
+  "i18n-ally.displayLanguage": "es",
+  "svg.preview.transparencyGrid": true,
+  "svg.preview.boundingBox": false,
+  "svg.preview.autoOpen": true,
+  "symbols.hidesExplorerArrows": false,
+  "notes.notesLocation": "/Users/jorge.gonzalez/Documents/notes",
+  "githubPullRequests.createOnPublishBranch": "never",
+  "githubPullRequests.fileListLayout": "tree",
+  "githubPullRequests.pullBranch": "never",
+  "git-graph.commitDetailsView.location": "Docked to Bottom",
+  "git-graph.date.format": "ISO Date & Time",
+  "git-graph.tabIconColourTheme": "grey",
+  "playwright.reuseBrowser": true,
+  "playwright.showTrace": false,
+  "dateTime.showDayOfMonth": true,
+  "dateTime.showMonth": true,
+  
   // ─────────────────────────────
   // Keybindings (Vim extension)
   // ─────────────────────────────
-  "outline.problems.badges": true,
-  "outline.problems.colors": true,
-  "outline.problems.enabled": true,
-  "outline.showConstructors": false,
-  "outline.showStructs": false,
-  "outline.showTypeParameters": false,
+  "vim.leader": "<Space>",
+  "vim.insertModeKeyBindings": [                       // jj to exit insert mode
+    { "before": ["j", "j"], "after": ["<Esc>"] }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+      {
+            "before": ["<leader>", "m"],
+            "commands": [
+                "bookmarks.toggle"
+            ]
+        },
+        {
+            "before": ["<leader>", "b"],
+            "commands": [
+                "bookmarks.list"
+            ]
+        },
+      {
+      "before": ["<Leader>", "p"],
+      "commands": [
+          "workbench.action.showCommands",
+      ]
+    },
+    {
+      "before": ["<Leader>", "t"],
+      "commands": [
+          "workbench.action.gotoSymbol",
+      ]
+    },
+     {
+      "before": ["<Leader>", "t", "t"],
+      "commands": [":tabnew"]
+    },
+    {
+      "before": ["<Leader>", "t", "n"],
+      "commands": [":tabnext"]
+    },
+    {
+      "before": ["<Leader>", "t", "p"],
+      "commands": [":tabprev"]
+    },
+    {
+      "before": ["<Leader>", "t", "o"],
+      "commands": [":tabo"]
+    },
+     { "before": ["<C-h>"], "after": ["<C-w>", "h"] },
+    { "before": ["<C-j>"], "after": ["<C-w>", "j"] },
+    {
+      "before": ["<C-k>"],
+      "after": ["<C-w>", "k"]
+    },
+    {
+      "before": ["<C-l>"],
+      "after": ["<C-w>", "l"]
+    },
+    {
+      "before": ["<Leader>", "j"],
+      "after": ["J"]
+    },
+     {
+      "before": ["J"],
+      "after": ["5", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["5", "k"]
+    },
+    { "before": ["g", "c", "c"], "commands": ["editor.action.commentLine"] },
+    { "before": ["g", "F"], "commands": ["outline.focus"] },
+     {
+    "before": ["g", "<space>", "e"],
+    "commands": [
+      "workbench.view.explorer",
+      "workbench.files.action.focusFilesExplorer"
+    ]
+  },
+    { "before": ["g", "<space>", "c", "c"], "commands": ["editor.action.commentLine"] }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    { "before": ["g", "c"], "commands": ["editor.action.commentLine"] },
+    { "before": ["g", "d"], "commands": ["editor.action.revealDefinition"] },
+    { "before": ["g", "r"], "commands": ["editor.action.referenceSearch.trigger"] }
+  ],
+  "vim.camelCaseMotion.enable": true,
+  "vim.foldfix": true,
+  "vim.easymotion": true,
 
   // ─────────────────────────────
   // Others
   // ─────────────────────────────
-  "Notes.notesLocation": "/Users/jorge.gonzalez/Documents/notes",
-  "notes.notesLocation": "/Users/jorge.gonzalez/Documents/notes",
-  "dateTime.showDayOfMonth": true,
-  "dateTime.showMonth": true,
-  "dateTime.showSeconds": true,
   "debug.console.fontSize": 11.5,
   "debug.inlineValues": "off",
   "debug.internalConsoleOptions": "neverOpen",
   "debug.javascript.autoAttachFilter": "onlyWithFlag",
   "debug.openDebug": "neverOpen",
-  "git-graph.commitDetailsView.location": "Docked to Bottom",
-  "git-graph.date.format": "ISO Date & Time",
-  "git-graph.tabIconColourTheme": "grey",
   "npm.runSilent": true,
   "screencastMode.fontSize": 32,
   "screencastMode.verticalOffset": 10,
-  "svg.preview.transparencyGrid": true,
-  "svg.preview.boundingBox": false,
-  "svg.preview.autoOpen": true,
-  "symbols.hidesExplorerArrows": false,
   "diffEditor.renderSideBySide": false,
   "accessibility.signals.save": { "sound": "never" },
   "accessibility.signalOptions.volume": 15,
   "remote.autoForwardPortsSource": "hybrid",
-  "security.promptForLocalFileProtocolHandling": false,
-  "settingsSync.ignoredSettings": [
-    "-window.zoomLevel",
-    "editor.fontFamily"
-  ],
   "window.zoomPerWindow": false,
   "window.zoomLevel": 1,
 }
