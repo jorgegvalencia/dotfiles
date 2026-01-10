@@ -108,7 +108,7 @@
   "editor.fontSize": 16,
   "editor.fontWeight": "400",
   "editor.fontLigatures": true,
-  "editor.lineHeight": 28,
+  "editor.lineHeight": 26,
   "editor.suggestFontSize": 15,                        // Intellisense font size
   "editor.suggestLineHeight": 28,
   "editor.lineNumbers": "relative", 
