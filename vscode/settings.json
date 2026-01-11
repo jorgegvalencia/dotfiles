@@ -189,7 +189,6 @@
   "[html]": { "editor.defaultFormatter": "vscode.html-language-features" },
   "[javascript]": { "editor.showFoldingControls": "mouseover" },
   "[json]": { "editor.defaultFormatter": "vscode.json-language-features" },
-  "[jsonc]": { "editor.defaultFormatter": "vscode.json-language-features" },
   "[yaml]": { "editor.autoIndent": "none", "editor.formatOnSave": false },
 
   // ─────────────────────────────
@@ -267,6 +266,5 @@
     "-window.zoomLevel",
     "editor.fontFamily"
   ],
-  "window.zoomPerWindow": false,
-  "window.zoomLevel": 1,
+  "window.zoomPerWindow": false
 }

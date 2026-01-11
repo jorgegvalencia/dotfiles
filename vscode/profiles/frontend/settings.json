@@ -71,7 +71,7 @@
       // "titleBar.activeBackground": "#15202b",
       "titleBar.activeForeground": "#42b883",
       // "titleBar.inactiveBackground": "#15202b99",
-      "titleBar.inactiveForeground": "#42b88399",
+      "titleBar.inactiveForeground": "#42b88399"
     },
 
     "debugToolBar.background": "#193549",
@@ -203,7 +203,7 @@
     "**/coverage": true,
     "**/package-lock.json": true,
     "**/public/{[^i],?[^n]}*": true,
-    "**/vendor/{[^l],?[^ai]}*": true,
+    "**/vendor/{[^l],?[^ai]}*": true
   },
   "search.useIgnoreFiles": false, 
   "search.quickAccess.preserveInput": true,
@@ -252,9 +252,6 @@
     "editor.showFoldingControls": "mouseover"
   },
   "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[vue]": {
@@ -336,13 +333,13 @@
       {
       "before": ["<Leader>", "p"],
       "commands": [
-          "workbench.action.showCommands",
+          "workbench.action.showCommands"
       ]
     },
     {
       "before": ["<Leader>", "t"],
       "commands": [
-          "workbench.action.gotoSymbol",
+          "workbench.action.gotoSymbol"
       ]
     },
      {
@@ -419,5 +416,5 @@
   "accessibility.signalOptions.volume": 15,
   "remote.autoForwardPortsSource": "hybrid",
   "window.zoomPerWindow": false,
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 1
 }
