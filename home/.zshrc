@@ -195,7 +195,7 @@ SAVEHIST=10000
 setopt SHARE_HISTORY
 
 # Added by Antigravity
-export PATH="/Users/jorgegvalencia/.antigravity/antigravity/bin:$PATH"
+export PATH="/Users/$HOME/.antigravity/antigravity/bin:$PATH"
 
 # fnm
 FNM_PATH="/opt/homebrew/opt/fnm/bin"
@@ -205,14 +205,14 @@ fi
 eval "$(fnm env)"
 
 # bun completions
-[ -s "/Users/jorgegvalencia/.bun/_bun" ] && source "/Users/jorgegvalencia/.bun/_bun"
+[ -s "/Users/$HOME/.bun/_bun" ] && source "/Users/$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # pnpm
-export PNPM_HOME="/Users/jorgegvalencia/Library/pnpm"
+export PNPM_HOME="/Users/$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
