@@ -217,7 +217,7 @@
   "terminal.explorerKind": "external",
   "terminal.integrated.allowMnemonics": true,
   "terminal.integrated.defaultLocation": "editor",
-  "terminal.integrated.fontFamily": "Hack Nerd Font Mono, Comic Code, Monaco, Fira Code, Inconsolata",
+  "terminal.integrated.fontFamily": "'JetBrainsMono NF', Hack Nerd Font Mono, Comic Code, Monaco, Fira Code, Inconsolata",
   "terminal.integrated.fontSize": 12.5,
   "terminal.integrated.fontWeight": "normal",
   "terminal.integrated.fontWeightBold": "500",
@@ -226,6 +226,7 @@
   "terminal.integrated.tabs.location": "left",
   "terminal.integrated.env.linux": {},
   "terminal.integrated.env.osx": {},
+  "terminal.integrated.initialHint": false,
 
   // ─────────────────────────────
   // Linting & Formatting (global)
