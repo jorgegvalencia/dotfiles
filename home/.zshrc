@@ -174,6 +174,8 @@ alias gc="git commit"
 alias gp="git push"
 alias gl="git log --oneline"
 
+alias g-commit='bash ~/.gemini/bin/commit.sh'
+
 # Vim shortcuts
 alias vimrc="vim ~/.vimrc"
 alias zshrc="vim ~/.zshrc"

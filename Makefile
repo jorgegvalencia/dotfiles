@@ -1,10 +1,11 @@
-.PHONY: install link brew vscode macos update help
+.PHONY: install link brew gemini vscode macos update help
 
 help:
 	@echo "Available commands:"
 	@echo "  make install  - Install everything"
 	@echo "  make link     - Create symlinks only"
 	@echo "  make brew     - Install Homebrew packages only"
+	@echo "  make gemini   - Setup Gemini-CLI only"
 	@echo "  make vscode   - Setup VSCode only"
 	@echo "  make macos    - Configure macOS system preferences"
 	@echo "  make update   - Export current configs to this repo"
@@ -17,6 +18,9 @@ link:
 
 brew:
 	./scripts/brew.sh
+
+gemini:
+	./scripts/gemini.sh
 
 vscode:
 	./scripts/vscode.sh
