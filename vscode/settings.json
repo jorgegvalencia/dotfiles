@@ -228,6 +228,105 @@
   // ─────────────────────────────
   // Keybindings (Vim extension)
   // ─────────────────────────────
+  "vim.leader": "<Space>",
+  "vim.insertModeKeyBindings": [                       // jj to exit insert mode
+    { "before": ["j", "j"], "after": ["<Esc>"] }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [";"],
+      "after": [":"]
+    },
+    {
+      "before": ["ñ"],
+      "after": [";"]
+    },
+    {
+        "before": ["-"],
+        "after": ["/"]
+    },
+    {
+        "before": ["<leader>", "m"],
+        "commands": [
+            "bookmarks.toggle"
+        ]
+    },
+    {
+        "before": ["<leader>", "b"],
+        "commands": [
+            "bookmarks.list"
+        ]
+    },
+    {
+      "before": ["<Leader>", "p"],
+      "commands": [
+          "workbench.action.showCommands"
+      ]
+    },
+    {
+      "before": ["<Leader>", "t"],
+      "commands": [
+          "workbench.action.gotoSymbol"
+      ]
+    },
+    {
+      "before": ["<Leader>", "t", "t"],
+      "commands": [":tabnew"]
+    },
+    {
+      "before": ["<Leader>", "t", "n"],
+      "commands": [":tabnext"]
+    },
+    {
+      "before": ["<Leader>", "t", "p"],
+      "commands": [":tabprev"]
+    },
+    {
+      "before": ["<Leader>", "t", "o"],
+      "commands": [":tabo"]
+    },
+    { "before": ["<C-h>"], "after": ["<C-w>", "h"] },
+    { "before": ["<C-j>"], "after": ["<C-w>", "j"] },
+    {
+      "before": ["<C-k>"],
+      "after": ["<C-w>", "k"]
+    },
+    {
+      "before": ["<C-l>"],
+      "after": ["<C-w>", "l"]
+    },
+    {
+      "before": ["<Leader>", "j"],
+      "after": ["J"]
+    },
+    {
+    "before": ["J"],
+      "after": ["5", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["5", "k"]
+    },
+    { "before": ["g", "c", "c"], "commands": ["editor.action.commentLine"] },
+    { "before": ["g", "F"], "commands": ["outline.focus"] },
+     {
+    "before": ["g", "<space>", "e"],
+    "commands": [
+      "workbench.view.explorer",
+      "workbench.files.action.focusFilesExplorer"
+    ]
+  },
+    { "before": ["g", "<space>", "c", "c"], "commands": ["editor.action.commentLine"] }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    { "before": ["g", "c"], "commands": ["editor.action.commentLine"] },
+    { "before": ["g", "d"], "commands": ["editor.action.revealDefinition"] },
+    { "before": ["g", "r"], "commands": ["editor.action.referenceSearch.trigger"] }
+  ],
+  "vim.camelCaseMotion.enable": true,
+  "vim.foldfix": true,
+  "vim.easymotion": true,
+
   "outline.problems.badges": true,
   "outline.problems.colors": true,
   "outline.problems.enabled": true,
