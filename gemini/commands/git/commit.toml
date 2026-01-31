@@ -21,6 +21,7 @@ Utiliza la salida de este comando para entender qué cambios están staged para 
    - Tipos: feat, fix, docs, style, refactor, perf, test, build, ci, chore.
    - Añade un cuerpo opcional si los cambios son complejos.
 5. **Ejecución**: Genera el comando final para realizar el commit.
-   - Utiliza el formato HEREDOC para evitar errores con caracteres especiales o comillas a la hora de hacer el commit.
+   - Utiliza el formato HEREDOC para evitar errores con caracteres especiales o comillas a la hora de hacer el commit,
+   además de formatear el mensaje en varias líneas si es necesario.
 6. **No Push**: Bajo ninguna circunstancia generes comandos de 'git push'.
 """
