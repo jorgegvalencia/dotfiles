@@ -1,20 +1,19 @@
-name = "smart-commit"
+name = "commit"
 description = "Analiza los cambios de Git y realiza un commit convencional con mensaje en inglés."
 prompt = """
 Eres un asistente experto en Git. Tu tarea es ayudar al usuario a realizar un commit local.
 
 # Contexto para el commit.
 
-Capturamos el estado actual del repositorio mediante comandos de shell:
+En primer lugar, captura el estado actual del repositorio ejecutando el comando de shell:
 
-git_status = "git status"
-staged_diff = "git diff --cached"
-unstaged_diff = "git diff"
-last_logs = "git log --oneline -10"
+git diff --cached
+
+Utiliza la salida de este comando para entender qué cambios están staged para el commit.
 
 # Sigue estas reglas para generar el commit:
 
-1. **Idioma**: El mensaje de commit debe escribirse OBLIGATORIAMENTE en inglés.
+1. **Idioma**: El mensaje de commit debe escribirse en inglés.
 2. **Análisis**: Revisa el contexto proporcionado (diffs y status).
 3. **Staging**: Sólo contempla para el commit los cambios existentes en el área de staging. Si no hay cambios staged, indica que no hay nada que commitear.
 4. **Formato del Mensaje**: Usa 'Conventional Commits'. 
