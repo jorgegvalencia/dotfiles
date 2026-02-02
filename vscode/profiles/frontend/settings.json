@@ -104,11 +104,11 @@
   // ─────────────────────────────
   // Editor: Typography & Layout
   // ─────────────────────────────
-  "editor.fontFamily": "CommitMono, Geist Mono, Monaco, Fira Code, Inconsolata, Cascadia Code, Consolas, 'Courier New', monospace",
-  "editor.fontSize": 16,
+  "editor.fontFamily": "JetBrains Mono, CommitMono, Geist Mono, Monaco, Fira Code, Inconsolata, Cascadia Code, Consolas, 'Courier New', monospace",
+  "editor.fontSize": 14,
   "editor.fontWeight": "400",
   "editor.fontLigatures": true,
-  "editor.lineHeight": 26,
+  "editor.lineHeight": 24,
   "editor.suggestFontSize": 15,                        // Intellisense font size
   "editor.suggestLineHeight": 28,
   "editor.lineNumbers": "relative", 

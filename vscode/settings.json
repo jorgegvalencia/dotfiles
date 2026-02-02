@@ -230,7 +230,7 @@
   // ─────────────────────────────
   "vim.leader": "<Space>",
   "vim.insertModeKeyBindings": [                       // jj to exit insert mode
-    { "before": ["j", "j"], "after": ["<Esc>"] }
+    { "before": ["j", "k"], "after": ["<Esc>"] }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
