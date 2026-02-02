@@ -63,11 +63,11 @@
   // ─────────────────────────────
   // Editor: Typography & Layout
   // ─────────────────────────────
-  "editor.fontFamily": "CommitMono, Geist Mono, Monaco, Fira Code, Inconsolata, Cascadia Code, Consolas, 'Courier New', monospace",
-  "editor.fontSize": 16,
+  "editor.fontFamily": "JetBrains Mono, CommitMono, Geist Mono, Monaco, Fira Code, Inconsolata, Cascadia Code, Consolas, 'Courier New', monospace",
+  "editor.fontSize": 14,
   "editor.fontWeight": "400",
   "editor.fontLigatures": true,
-  "editor.lineHeight": 26,
+  "editor.lineHeight": 24,
   "editor.letterSpacing": -0.7,
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
@@ -264,7 +264,7 @@
       ]
     },
     {
-      "before": ["<Leader>", "t"],
+      "before": ["<Leader>", "g"],
       "commands": [
           "workbench.action.gotoSymbol"
       ]
